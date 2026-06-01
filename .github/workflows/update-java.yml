@@ -29,9 +29,7 @@ jobs:
          - name: Commit and push if changed
            uses: stefanzweifel/git-auto-commit-action@v5
            with:
-              commit_message: "Chore: Update java manifest"
+              commit_message: "chore: update java manifest"
               branch: master
               commit_user_name: InuSDK Bot
               commit_user_email: bot@inusdk.dev
-           env:
-              GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

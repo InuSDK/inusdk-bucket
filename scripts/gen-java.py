@@ -91,7 +91,7 @@ def build_manifest(existing_manifest=None):
 
 
 def main():
-    manifest_path = "manifest/java.json"
+    manifest_path = "manifests/java.json"
 
     # Load existing manifest if it exists
     existing = None

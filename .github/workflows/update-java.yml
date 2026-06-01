@@ -27,13 +27,11 @@ jobs:
            run: python scripts/gen-java.py
 
          - name: Commit and push if changed
-           run: |
-              git config user.name "InuSDK Bot"
-              git config user.email "bot@inusdk.dev"
-              git add manifests/java.json
-              if ! git diff --staged --quiet; then
-                git commit -m "chore: update java manifest"
-                git push
-              fi
+           uses: stefanzweifel/git-auto-commit-action@v5
+           with:
+              commit_message: "Chore: Update java manifest"
+              branch: master
+              commit_user_name: InuSDK Bot
+              commit_user_email: bot@inusdk.dev
            env:
               GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

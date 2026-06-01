@@ -27,4 +27,7 @@ jobs:
               git config user.name "InuSDK Bot"
               git config user.email "bot@inusdk.dev"
               git add manifests/java.json
-              git diff --staged --quiet || (git commit -m "Chore: update java manifest"
+              if ! git diff --staged --quiet; then
+                git commit -m "chore: update java manifest"
+                git push
+              fi

@@ -1,0 +1,6 @@
+{
+  "name": "java",
+  "description": "OpenJDK via Eclipse Temurin",
+  "homepage": "https://adoptium.net",
+  "versions": {}
+}

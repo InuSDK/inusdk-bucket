@@ -75,8 +75,8 @@ def build_manifest(existing_manifest=None):
                 if not semver or not package.get("link"):
                     continue
 
-                if semver not in manifest["verisons"]:
-                    manifest["version"][semver] = {
+                if semver not in manifest["versions"]:
+                    manifest["versions"][semver] = {
                         "windows": {},
                         "linux": {},
                         "darwin": {},
@@ -84,6 +84,12 @@ def build_manifest(existing_manifest=None):
 
                 goos = platform["goos"]
                 goarch = platform["goarch"]
+
+                manifest["versions"][semver][goos][goarch] = {
+                    "url": package["link"],
+                    "checksum": f"sha256:{package.get('checksum', '')}",
+                    "bin": BIN_PATH[goos],
+                }
 
                 print(f"{semver} {goos}/{goarch}", file=sys.stderr)
 
@@ -93,12 +99,21 @@ def build_manifest(existing_manifest=None):
 def main():
     manifest_path = "manifests/java.json"
 
-    # Load existing manifest if it exists
     existing = None
     if os.path.exists(manifest_path):
-        with open(manifest_path, "r") as f:
-            existing = json.load(f)
-        print("Loaded existing manifest, mergin. . .", file=sys.stderr)
+        try:
+            with open(manifest_path, "r") as f:
+                content = f.read().strip()
+                if content:
+                    existing = json.loads(content)
+                    print("Loaded existing manifest, merging . . .", file=sys.stderr)
+                else:
+                    print("Existing manifest is empty, starting fresh", file=sys.stderr)
+        except json.JSONDecodeError as err:
+            print(
+                f"Could not parse existing manifest ({err}), starting fresh. . . ",
+                file=sys.stderr,
+            )
 
     manifest = build_manifest(existing)
 
@@ -106,7 +121,7 @@ def main():
         json.dump(manifest, f, indent=2)
 
     print(f"Manifest written to {manifest_path}", file=sys.stderr)
-    print(f"   Total versions: {len(manifest['version'])}", file=sys.stderr)
+    print(f"   Total versions: {len(manifest['versions'])}", file=sys.stderr)
 
 
 if __name__ == "__main__":

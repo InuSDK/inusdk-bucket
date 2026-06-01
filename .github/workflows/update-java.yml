@@ -20,7 +20,7 @@ jobs:
            run: pip install requests
 
          - name: Run Java manifest generator
-           run: pyuthon scripts/gen-java.py
+           run: python scripts/gen-java.py
 
          - name: Commit and push if changed
            run: |

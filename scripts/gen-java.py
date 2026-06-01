@@ -39,11 +39,9 @@ def fetch_version_builds(major, goos, arch):
         f"{ADOPTIUM_API}/assets/feature_releases/{major}/ga"
         f"?architecture={arch}&image_type=jdk&os={goos}&vendor=eclipse&page_size=20"
     )
-
     resp = requests.get(url)
     if resp.status_code == 404:
         return []
-
     resp.raise_for_status()
     return resp.json()
 
@@ -60,19 +58,25 @@ def build_manifest(existing_manifest=None):
     print(f"Found major versions: {major_versions}", file=sys.stderr)
 
     for major in major_versions:
-        print(f"Processing Java {major}. . .", file=sys.stderr)
+        print(f"Processing Java {major}...", file=sys.stderr)
 
         for platform in PLATFORMS:
-            builds = fetch_version_builds(major, platform["os"], platform["arch"])
+            releases = fetch_version_builds(major, platform["os"], platform["arch"])
 
-            for build in builds:
-                binary = build.get("binary", {})
+            for release in releases:
+                # feature_releases returns releases with nested binaries array
+                version_data = release.get("version", {})
+                semver = version_data.get("semver", "")
+                binaries = release.get("binaries", [])
+
+                if not semver or not binaries:
+                    continue
+
+                # Get first binary that matches
+                binary = binaries[0]
                 package = binary.get("package", {})
 
-                version = build.get("version", {})
-                semver = version.get("semver", "")
-
-                if not semver or not package.get("link"):
+                if not package.get("link"):
                     continue
 
                 if semver not in manifest["versions"]:
@@ -91,7 +95,7 @@ def build_manifest(existing_manifest=None):
                     "bin": BIN_PATH[goos],
                 }
 
-                print(f"{semver} {goos}/{goarch}", file=sys.stderr)
+                print(f"  ✓ {semver} {goos}/{goarch}", file=sys.stderr)
 
     return manifest
 

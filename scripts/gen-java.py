@@ -70,15 +70,23 @@ def build_manifest(existing_manifest=None):
             releases = fetch_version_builds(major, platform["os"], platform["arch"])
 
             for release in releases:
-                # feature_releases returns releases with nested binaries array
-                version_data = release.get("version", {})
-                semver = version_data.get("semver", "")
+                # version data is under "version_data" not "version"
+                version_data = release.get("version_data", {})
                 binaries = release.get("binaries", [])
 
-                if not semver or not binaries:
+                if not binaries:
                     continue
 
-                # Get first binary that matches
+                # Build clean semver from components: "21.0.11"
+                major_v = version_data.get("major", "")
+                minor_v = version_data.get("minor", "")
+                security_v = version_data.get("security", "")
+
+                if not major_v:
+                    continue
+
+                semver = f"{major_v}.{minor_v}.{security_v}"
+
                 binary = binaries[0]
                 package = binary.get("package", {})
 

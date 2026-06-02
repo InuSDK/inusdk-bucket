@@ -43,7 +43,13 @@ def fetch_version_builds(major, goos, arch):
     if resp.status_code == 404:
         return []
     resp.raise_for_status()
-    return resp.json()
+    data = resp.json()
+
+    # Print raw response
+    if major == 21 and goos == "windows" and arch == "x64":
+        print(f"Raw response: {json.dumps(data[:1], indent=2)}", file=sys.stderr)
+
+    return data
 
 
 def build_manifest(existing_manifest=None):

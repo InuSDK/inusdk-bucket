@@ -1,0 +1,36 @@
+name: Update LLVM/Clang manifest
+
+on:
+   schedule:
+      - cron: "0 1 * * *"
+   workflow_dispatch:
+
+jobs:
+   update:
+      runs-on: ubuntu-latest
+      permissions:
+         contents: write
+      steps:
+         - uses: actions/checkout@v4
+           with:
+              token: ${{ secrets.GITHUB_TOKEN }}
+         - name: Set up Python
+           uses: actions/setup-python@v5
+           with:
+              python-version: "3.12"
+
+         - name: Install dependencies
+           run: pip install requests
+
+         - name: Run Clang manifest generator
+           run: python scripts/gen-clang.py
+           env:
+              GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+         - name: Commit and push if changed
+           uses: stefanzweifel/git-auto-commit-action@v5
+           with:
+              commit_message: "chore: Update LLVM/Clang manifest"
+              branch: master
+              commit_user_name: InuSDK Bot
+              commit_user_email: bot@inusdk.dev

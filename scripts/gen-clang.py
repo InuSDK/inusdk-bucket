@@ -34,7 +34,7 @@ def fetch_releases(page=1):
 
 def parse_version(tag_name):
     """This function extract the clean version from tag, example: 'llvmorg-18.1.0"""
-    match = re.match(r"llvmorg-(\d+\.\d+\.\d+", tag_name)
+    match = re.match(r"llvmorg-(\d+\.\d+\.\d+)$", tag_name)
     if match:
         return match.group(1)
 

@@ -149,7 +149,7 @@ def main():
         json.dump(manifest, file, indent=2)
 
     print(f"\nSuccesfully manifest written to {manifest_path}", file=sys.stderr)
-    print(f"   Total versions: {len(manifest['version'])}", file=sys.stderr)
+    print(f"   Total versions: {len(manifest['versions'])}", file=sys.stderr)
 
 
 if __name__ == "__main__":

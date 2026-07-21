@@ -126,7 +126,7 @@ def build_manifest(existing_manifest=None):
 
 
 def main():
-    manifest_path = "manifest/clang.json"
+    manifest_path = "manifests/clang.json"
 
     existing = None
     if os.path.exists(manifest_path):

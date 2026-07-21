@@ -8,15 +8,23 @@ import requests
 GITHUB_API = "https://api.github.com/repos/llvm/llvm-project/releases"
 
 PLATFORMS = [
-    {"pattern": "Windows-X64", "goos": "windows", "goarch": "amd64", "ext": ".zip"},
-    {"pattern": "Windows-ARM64", "goos": "windows", "goarch": "arm64", "ext": ".zip"},
+    {
+        "pattern": "x86_64-pc-windows-msvc",
+        "goos": "windows",
+        "goarch": "amd64",
+        "ext": ".tar.xz",
+    },
     {"pattern": "Linux-X64", "goos": "linux", "goarch": "amd64", "ext": ".tar.xz"},
     {"pattern": "Linux-ARM64", "goos": "linux", "goarch": "arm64", "ext": ".tar.xz"},
     {"pattern": "macOS-X64", "goos": "darwin", "goarch": "amd64", "ext": ".tar.xz"},
     {"pattern": "macOS-ARM64", "goos": "darwin", "goarch": "arm64", "ext": ".tar.xz"},
 ]
 
-BIN_PATH = {"windows": "bin/clang.exe", "linux": "bin/clang", "darwin": "bin/clang"}
+BIN_PATH = {
+    "windows": "bin/clang.exe",
+    "linux": "bin/clang",
+    "darwin": "bin/clang",
+}
 
 
 def fetch_releases(page=1):
@@ -104,6 +112,7 @@ def build_manifest(existing_manifest=None):
                         platform["pattern"] in name
                         and name.endswith(platform["ext"])
                         and "installer" not in name.lower()
+                        and not name.endswith(".exe")
                     ):
                         checksum = get_checksum(asset["browser_download_url"], headers)
                         goos = platform["goos"]

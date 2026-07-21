@@ -88,7 +88,7 @@ def build_manifest(existing_manifest=None):
             print(f"Processing LLVM/Clang {version}. . .", file=sys.stderr)
 
             if version not in manifest["versions"]:
-                manifest["version"][version] = {
+                manifest["versions"][version] = {
                     "windows": {},
                     "linux": {},
                     "darwin": {},

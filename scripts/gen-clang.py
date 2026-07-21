@@ -109,7 +109,7 @@ def build_manifest(existing_manifest=None):
                         goos = platform["goos"]
                         goarch = platform["goarch"]
 
-                        manifest["version"][version][goos][goarch] = {
+                        manifest["versions"][version][goos][goarch] = {
                             "url": asset["browser_download_url"],
                             "checksum": f"sha256:{checksum}",
                             "bin": BIN_PATH[goos],

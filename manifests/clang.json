@@ -1,0 +1,635 @@
+{
+  "name": "clang",
+  "description": "LLVM/Clang compiler toolchain",
+  "homepage": "https://llvm.org",
+  "versions": {
+    "22.1.8": {
+      "windows": {
+        "amd64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.8/clang%2Bllvm-22.1.8-x86_64-pc-windows-msvc.tar.xz",
+          "checksum": "sha256:d96c2cc1736f4eb7fa43cb9bbdf56d93551a9ae0a9aadb9c99c3c3b2b712a234",
+          "bin": "bin/clang.exe"
+        }
+      },
+      "linux": {
+        "amd64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.8/LLVM-22.1.8-Linux-X64.tar.xz",
+          "checksum": "sha256:df0e1ecf16caf3489a272a5eea4eec9b0d82878f6477fa309504f918a0006384",
+          "bin": "bin/clang"
+        },
+        "arm64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.8/LLVM-22.1.8-Linux-ARM64.tar.xz",
+          "checksum": "sha256:805efad2bb91cb4967fa569e0881d10c0f69c04461cf671cccbae19f547acc34",
+          "bin": "bin/clang"
+        }
+      },
+      "darwin": {
+        "arm64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.8/LLVM-22.1.8-macOS-ARM64.tar.xz",
+          "checksum": "sha256:f260f4f7c0d430828a81ae8a3826a1d63fc0963ec2459489308cc23b1f7eab4f",
+          "bin": "bin/clang"
+        }
+      }
+    },
+    "22.1.7": {
+      "windows": {
+        "amd64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.7/clang%2Bllvm-22.1.7-x86_64-pc-windows-msvc.tar.xz",
+          "checksum": "sha256:3b568b5be1443d1a04c63261fa3a7aed16e126a8ed2196a1032aa8ed602144bd",
+          "bin": "bin/clang.exe"
+        }
+      },
+      "linux": {
+        "amd64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.7/LLVM-22.1.7-Linux-X64.tar.xz",
+          "checksum": "sha256:edb0522b41e261819c06ea437d249f9b8acfa413d3805bc9920eec6fb76ff830",
+          "bin": "bin/clang"
+        },
+        "arm64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.7/LLVM-22.1.7-Linux-ARM64.tar.xz",
+          "checksum": "sha256:118ca2d3ad9da34367e05735317854e7977db45dc4c02a32af58da64c23b8789",
+          "bin": "bin/clang"
+        }
+      },
+      "darwin": {
+        "arm64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.7/LLVM-22.1.7-macOS-ARM64.tar.xz",
+          "checksum": "sha256:4177245188b0a30a6539c96b361dea56f253485756bfd8927a6a59e7301e7806",
+          "bin": "bin/clang"
+        }
+      }
+    },
+    "22.1.6": {
+      "windows": {
+        "amd64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.6/clang%2Bllvm-22.1.6-x86_64-pc-windows-msvc.tar.xz",
+          "checksum": "sha256:657343edf361ca463bd642e39c74b251c6338b96cdbd55ff277555298b027696",
+          "bin": "bin/clang.exe"
+        }
+      },
+      "linux": {
+        "amd64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.6/LLVM-22.1.6-Linux-X64.tar.xz",
+          "checksum": "sha256:c5ac8ef89ca39d30cb32e9b83772f995dd891c685ebc188d593c943a64d5f8b5",
+          "bin": "bin/clang"
+        },
+        "arm64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.6/LLVM-22.1.6-Linux-ARM64.tar.xz",
+          "checksum": "sha256:b67817634e8e1c2632dfc056af14d61b94f8e6502f4e557560eea227aa22ce37",
+          "bin": "bin/clang"
+        }
+      },
+      "darwin": {
+        "arm64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.6/LLVM-22.1.6-macOS-ARM64.tar.xz",
+          "checksum": "sha256:8059d9d9eeb059c30d812b4a37291888f8dcba04d2b5ace61fd12d2904eaa0e9",
+          "bin": "bin/clang"
+        }
+      }
+    },
+    "22.1.5": {
+      "windows": {
+        "amd64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.5/clang%2Bllvm-22.1.5-x86_64-pc-windows-msvc.tar.xz",
+          "checksum": "sha256:52c15696665ec3010e100261cb2919d40712dbf871c9a2886a2e60b665bcd2c6",
+          "bin": "bin/clang.exe"
+        }
+      },
+      "linux": {
+        "amd64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.5/LLVM-22.1.5-Linux-X64.tar.xz",
+          "checksum": "sha256:04dfa3ab6f1c332dd73a057daeb8f48cdaacdef24178f8eccddf2cbfa8944aa4",
+          "bin": "bin/clang"
+        },
+        "arm64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.5/LLVM-22.1.5-Linux-ARM64.tar.xz",
+          "checksum": "sha256:05e303cf01a97ca2a11e42e75ade839e85af274f84573554c5e5c05f714be989",
+          "bin": "bin/clang"
+        }
+      },
+      "darwin": {
+        "arm64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.5/LLVM-22.1.5-macOS-ARM64.tar.xz",
+          "checksum": "sha256:c4e5aa26d5bb9938237fa1626fe3b0506887b50026bac785b85dd3314be8d5e6",
+          "bin": "bin/clang"
+        }
+      }
+    },
+    "22.1.4": {
+      "windows": {
+        "amd64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.4/clang%2Bllvm-22.1.4-x86_64-pc-windows-msvc.tar.xz",
+          "checksum": "sha256:ed775bdaea7087c6c1aeac9498352cfcd8610d92dc4fe9eda9aecb15ce712a2c",
+          "bin": "bin/clang.exe"
+        }
+      },
+      "linux": {
+        "amd64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.4/LLVM-22.1.4-Linux-X64.tar.xz",
+          "checksum": "sha256:cdf232e3bc5d9909ddcf8cb7016802c6745a01e69a596747c684caa894a11567",
+          "bin": "bin/clang"
+        },
+        "arm64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.4/LLVM-22.1.4-Linux-ARM64.tar.xz",
+          "checksum": "sha256:ac8bed48a6481ccc0e14af18f64d44fc1ca8c0ccf630c1d4dc5e97027e87e6fa",
+          "bin": "bin/clang"
+        }
+      },
+      "darwin": {
+        "arm64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.4/LLVM-22.1.4-macOS-ARM64.tar.xz",
+          "checksum": "sha256:45e0dfc0453624caed5e7b20e224ce8343af9c511c7f59803753a586620d6ad1",
+          "bin": "bin/clang"
+        }
+      }
+    },
+    "22.1.3": {
+      "windows": {
+        "amd64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.3/clang%2Bllvm-22.1.3-x86_64-pc-windows-msvc.tar.xz",
+          "checksum": "sha256:f2d7d200f72c83880aa2c1c00f6b6a67d0ea607ea663dafbd0cb2db6e2819ed0",
+          "bin": "bin/clang.exe"
+        }
+      },
+      "linux": {
+        "amd64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.3/LLVM-22.1.3-Linux-X64.tar.xz",
+          "checksum": "sha256:6e776c396895837a168a36d13e0b0e4552680eda58d8dab6aa5fb75e2c3d13ea",
+          "bin": "bin/clang"
+        },
+        "arm64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.3/LLVM-22.1.3-Linux-ARM64.tar.xz",
+          "checksum": "sha256:4dc01fbb46084b3c3304a51e8412903da3735d5a276bcdd35333bc38bad8a8b6",
+          "bin": "bin/clang"
+        }
+      },
+      "darwin": {
+        "arm64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.3/LLVM-22.1.3-macOS-ARM64.tar.xz",
+          "checksum": "sha256:881e524d374cd2befd95888db1846e3150b0728fa842b90bb15bafc0b19c075c",
+          "bin": "bin/clang"
+        }
+      }
+    },
+    "22.1.2": {
+      "windows": {
+        "amd64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.2/clang%2Bllvm-22.1.2-x86_64-pc-windows-msvc.tar.xz",
+          "checksum": "sha256:6550bcc308bf972f7f956001b73f6478da3d22f1ebd4b01653c978a6c7ff3698",
+          "bin": "bin/clang.exe"
+        }
+      },
+      "linux": {
+        "amd64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.2/LLVM-22.1.2-Linux-X64.tar.xz",
+          "checksum": "sha256:ff32497b6801267ee427bc69cdaeecfb2d19578af8c2a942e864c45215f9a2ac",
+          "bin": "bin/clang"
+        },
+        "arm64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.2/LLVM-22.1.2-Linux-ARM64.tar.xz",
+          "checksum": "sha256:cf2e84d965a95954971cafc71d18c0eb38e723c3ac7276286fd5636df4374b3a",
+          "bin": "bin/clang"
+        }
+      },
+      "darwin": {
+        "arm64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.2/LLVM-22.1.2-macOS-ARM64.tar.xz",
+          "checksum": "sha256:7b290ec4529c309b6b952d64a3513595c816dff1c217d54466a586d6e35dcec9",
+          "bin": "bin/clang"
+        }
+      }
+    },
+    "22.1.1": {
+      "windows": {
+        "amd64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.1/clang%2Bllvm-22.1.1-x86_64-pc-windows-msvc.tar.xz",
+          "checksum": "sha256:186f17ebedf13bae2835b2c0d5111a2a469ac241e7fc6387c9ce4585d6ef56ed",
+          "bin": "bin/clang.exe"
+        }
+      },
+      "linux": {
+        "amd64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.1/LLVM-22.1.1-Linux-X64.tar.xz",
+          "checksum": "sha256:efc4d945744f951df00ec72c5b31da5d5a2eaf1d53cc7c9d0644f93f0f9e817d",
+          "bin": "bin/clang"
+        },
+        "arm64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.1/LLVM-22.1.1-Linux-ARM64.tar.xz",
+          "checksum": "sha256:a807a16a4dd9a288b6ad3d507df4eae47dfdfbccab118170ebd216b85370a065",
+          "bin": "bin/clang"
+        }
+      },
+      "darwin": {
+        "arm64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.1/LLVM-22.1.1-macOS-ARM64.tar.xz",
+          "checksum": "sha256:3839802601439300fc8d1d378bc26732e879e1ca80a220f7d6764ed229053e92",
+          "bin": "bin/clang"
+        }
+      }
+    },
+    "22.1.0": {
+      "windows": {
+        "amd64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.0/clang%2Bllvm-22.1.0-x86_64-pc-windows-msvc.tar.xz",
+          "checksum": "sha256:2dd6a6c990865f98766dec58cce1cbfba48e5affc0098e5b1fff96c2f1d23e81",
+          "bin": "bin/clang.exe"
+        }
+      },
+      "linux": {
+        "amd64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.0/LLVM-22.1.0-Linux-X64.tar.xz",
+          "checksum": "sha256:8d662e425e46c48b45f5f970770b5e37f323607c8c2cbc371593fc9c4ba1e7b3",
+          "bin": "bin/clang"
+        },
+        "arm64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.0/LLVM-22.1.0-Linux-ARM64.tar.xz",
+          "checksum": "sha256:e3b4205fe45d5561dec9d46465873a79c26b25b028b310515b38c34f668c6aec",
+          "bin": "bin/clang"
+        }
+      },
+      "darwin": {
+        "arm64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.0/LLVM-22.1.0-macOS-ARM64.tar.xz",
+          "checksum": "sha256:cd5e615f4dab23d0239359cd343202c5f6ceeaf072c245a3c685d73afac09646",
+          "bin": "bin/clang"
+        }
+      }
+    },
+    "21.1.8": {
+      "windows": {
+        "amd64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-21.1.8/clang%2Bllvm-21.1.8-x86_64-pc-windows-msvc.tar.xz",
+          "checksum": "sha256:749d22f565fcd5718dbed06512572d0e5353b502c03fe1f7f17ee8b8aca21a47",
+          "bin": "bin/clang.exe"
+        }
+      },
+      "linux": {
+        "amd64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-21.1.8/LLVM-21.1.8-Linux-X64.tar.xz",
+          "checksum": "sha256:b3b7f2801d15d50736acea3c73982994d025b01c2f035b91ae3b49d1b575732b",
+          "bin": "bin/clang"
+        },
+        "arm64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-21.1.8/LLVM-21.1.8-Linux-ARM64.tar.xz",
+          "checksum": "sha256:65ce0b329514e5643407db2d02a5bd34bf33d159055dafa82825c8385bd01993",
+          "bin": "bin/clang"
+        }
+      },
+      "darwin": {
+        "arm64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-21.1.8/LLVM-21.1.8-macOS-ARM64.tar.xz",
+          "checksum": "sha256:b95bdd32a33a81ee4d40363aaeb26728a26783fcef26a4d80f65457433ea4669",
+          "bin": "bin/clang"
+        }
+      }
+    },
+    "21.1.7": {
+      "windows": {
+        "amd64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-21.1.7/clang%2Bllvm-21.1.7-x86_64-pc-windows-msvc.tar.xz",
+          "checksum": "sha256:70a2b73f2f14f787557f90abf380e7170b54e97b893218999144de5284b4f8f8",
+          "bin": "bin/clang.exe"
+        }
+      },
+      "linux": {
+        "amd64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-21.1.7/LLVM-21.1.7-Linux-X64.tar.xz",
+          "checksum": "sha256:621ab8424178ffc28db0facc5aefd3fc11f5dea339aac171b36fa0b8d4b368cb",
+          "bin": "bin/clang"
+        },
+        "arm64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-21.1.7/LLVM-21.1.7-Linux-ARM64.tar.xz",
+          "checksum": "sha256:aa85ddc8ba95ac5f2febddb51a6891ee0e57ac058c6455395d5a4bfa5650d44b",
+          "bin": "bin/clang"
+        }
+      },
+      "darwin": {}
+    },
+    "21.1.6": {
+      "windows": {
+        "amd64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-21.1.6/clang%2Bllvm-21.1.6-x86_64-pc-windows-msvc.tar.xz",
+          "checksum": "sha256:6fd57e4461f4f30913c6a345dd093d71df963aaf94f1ec80bb5cfb24ebb047a1",
+          "bin": "bin/clang.exe"
+        }
+      },
+      "linux": {
+        "amd64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-21.1.6/LLVM-21.1.6-Linux-X64.tar.xz",
+          "checksum": "sha256:8ac1aadfa96b87b8747f7383d06ed9579f9d5c32a1af7af947b0cfe29d88ac87",
+          "bin": "bin/clang"
+        },
+        "arm64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-21.1.6/LLVM-21.1.6-Linux-ARM64.tar.xz",
+          "checksum": "sha256:1d8a9e05007b8b9005c63f90d7646b2b6263451d605cca070418d0a71e669377",
+          "bin": "bin/clang"
+        }
+      },
+      "darwin": {
+        "arm64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-21.1.6/LLVM-21.1.6-macOS-ARM64.tar.xz",
+          "checksum": "sha256:bdf036e9987b8706471b565f50178a34218909b1858a82c426269da49780b6ba",
+          "bin": "bin/clang"
+        }
+      }
+    },
+    "21.1.5": {
+      "windows": {
+        "amd64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-21.1.5/clang%2Bllvm-21.1.5-x86_64-pc-windows-msvc.tar.xz",
+          "checksum": "sha256:eba824f1379fdb1a385f6dff8d19275a57348f621c752ce93b6d11256741e349",
+          "bin": "bin/clang.exe"
+        }
+      },
+      "linux": {
+        "amd64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-21.1.5/LLVM-21.1.5-Linux-X64.tar.xz",
+          "checksum": "sha256:6279d78feeeb8e839a397f0bca7b1c0594972224d59525496416653d9b9c077f",
+          "bin": "bin/clang"
+        },
+        "arm64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-21.1.5/LLVM-21.1.5-Linux-ARM64.tar.xz",
+          "checksum": "sha256:c9a1ee5d1a1698a8eb0abda1c1e44c812378aec32f89cc4fbbb41865237359a9",
+          "bin": "bin/clang"
+        }
+      },
+      "darwin": {}
+    },
+    "21.1.4": {
+      "windows": {
+        "amd64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-21.1.4/clang%2Bllvm-21.1.4-x86_64-pc-windows-msvc.tar.xz",
+          "checksum": "sha256:511e4e7e0a43156cb1410578285f1db246ebb400db0018cd304c84a369562b6d",
+          "bin": "bin/clang.exe"
+        }
+      },
+      "linux": {
+        "amd64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-21.1.4/LLVM-21.1.4-Linux-X64.tar.xz",
+          "checksum": "sha256:53c8d9a173c39c952ae367974b0b9c1dcfddeb81341c3d0553748e8407abe9f8",
+          "bin": "bin/clang"
+        },
+        "arm64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-21.1.4/LLVM-21.1.4-Linux-ARM64.tar.xz",
+          "checksum": "sha256:b1cdf40de4dc53fc090684fb6a160c0c9348242d85d2321441a9873cb116ea18",
+          "bin": "bin/clang"
+        }
+      },
+      "darwin": {}
+    },
+    "21.1.3": {
+      "windows": {
+        "amd64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-21.1.3/clang%2Bllvm-21.1.3-x86_64-pc-windows-msvc.tar.xz",
+          "checksum": "sha256:95dc158e0b9dbeb32833096bec05040b5c847b4cb71bf0a304e51832a5fe5ff3",
+          "bin": "bin/clang.exe"
+        }
+      },
+      "linux": {
+        "amd64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-21.1.3/LLVM-21.1.3-Linux-X64.tar.xz",
+          "checksum": "sha256:52866dc560a4c00c12fed63a006d629108117e2282fd37875887961dd7b5f6f8",
+          "bin": "bin/clang"
+        },
+        "arm64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-21.1.3/LLVM-21.1.3-Linux-ARM64.tar.xz",
+          "checksum": "sha256:563be4f9f9186c909e5de937b2097338132422957c7919a29d8ff524a32213c0",
+          "bin": "bin/clang"
+        }
+      },
+      "darwin": {}
+    },
+    "21.1.2": {
+      "windows": {
+        "amd64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-21.1.2/clang%2Bllvm-21.1.2-x86_64-pc-windows-msvc.tar.xz",
+          "checksum": "sha256:929c60a1342ced5641ddbef709d3e5a0fbe291686800e9f5b543aa88b8d43019",
+          "bin": "bin/clang.exe"
+        }
+      },
+      "linux": {
+        "amd64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-21.1.2/LLVM-21.1.2-Linux-X64.tar.xz",
+          "checksum": "sha256:38dc1e278b8d688d9f4f1077da1dcda623d9e0dd89ffcf03bc18d3492bbd9cb6",
+          "bin": "bin/clang"
+        },
+        "arm64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-21.1.2/LLVM-21.1.2-Linux-ARM64.tar.xz",
+          "checksum": "sha256:b16c36731eabdc3cbe7f265e241efdb9aa6ab7c4be4114763c356da1392aac73",
+          "bin": "bin/clang"
+        }
+      },
+      "darwin": {}
+    },
+    "21.1.1": {
+      "windows": {
+        "amd64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-21.1.1/clang%2Bllvm-21.1.1-x86_64-pc-windows-msvc.tar.xz",
+          "checksum": "sha256:2a5b94a59270d6c60128d5cac244dc898fcf061a72de1633554e98881f8ade55",
+          "bin": "bin/clang.exe"
+        }
+      },
+      "linux": {
+        "amd64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-21.1.1/LLVM-21.1.1-Linux-X64.tar.xz",
+          "checksum": "sha256:fe9886992273e469fbd664851cbee2f125b383664694684923a41af1c71b9632",
+          "bin": "bin/clang"
+        },
+        "arm64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-21.1.1/LLVM-21.1.1-Linux-ARM64.tar.xz",
+          "checksum": "sha256:2764bb49ad4dab93226328d6374ca4466799bdc18372c544d8f6ebc1aa0c28a9",
+          "bin": "bin/clang"
+        }
+      },
+      "darwin": {}
+    },
+    "21.1.0": {
+      "windows": {
+        "amd64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-21.1.0/clang%2Bllvm-21.1.0-x86_64-pc-windows-msvc.tar.xz",
+          "checksum": "sha256:751aab63f074f041883a5317ad100dbe1e60794693f896df83958824cbc4962a",
+          "bin": "bin/clang.exe"
+        }
+      },
+      "linux": {
+        "amd64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-21.1.0/LLVM-21.1.0-Linux-X64.tar.xz",
+          "checksum": "sha256:4a8c4b07646a4a2eb76ccf1d73522c3e13519745b72ef09d631c09b7577b0ed2",
+          "bin": "bin/clang"
+        },
+        "arm64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-21.1.0/LLVM-21.1.0-Linux-ARM64.tar.xz",
+          "checksum": "sha256:ffd51d9a583c1f662abc101f3a125d7303b21ad7d4e15773c8ad2c14cf621d5e",
+          "bin": "bin/clang"
+        }
+      },
+      "darwin": {}
+    },
+    "20.1.8": {
+      "windows": {
+        "amd64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.8/clang%2Bllvm-20.1.8-x86_64-pc-windows-msvc.tar.xz",
+          "checksum": "sha256:f229769f11d6a6edc8ada599c0cda964b7dee6ab1a08c6cf9dd7f513e85b107f",
+          "bin": "bin/clang.exe"
+        }
+      },
+      "linux": {
+        "amd64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.8/LLVM-20.1.8-Linux-X64.tar.xz",
+          "checksum": "sha256:1ead36b3dfcb774b57be530df42bec70ab2d239fbce9889447c7a29a4ddc1ae6",
+          "bin": "bin/clang"
+        },
+        "arm64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.8/LLVM-20.1.8-Linux-ARM64.tar.xz",
+          "checksum": "sha256:b855cc17d935fdd83da82206b7a7cfc680095efd1e9e8182c4a05e761958bef8",
+          "bin": "bin/clang"
+        }
+      },
+      "darwin": {
+        "arm64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.8/LLVM-20.1.8-macOS-ARM64.tar.xz",
+          "checksum": "sha256:a9a22f450d35f1f73cd61ab6a17c6f27d8f6051d56197395c1eb397f0c9bbec4",
+          "bin": "bin/clang"
+        }
+      }
+    },
+    "20.1.7": {
+      "windows": {
+        "amd64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.7/clang%2Bllvm-20.1.7-x86_64-pc-windows-msvc.tar.xz",
+          "checksum": "sha256:34a66bb4891584b32d32bbe5f129e345899b255593dab2c359b730b92e304b3e",
+          "bin": "bin/clang.exe"
+        }
+      },
+      "linux": {
+        "amd64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.7/LLVM-20.1.7-Linux-X64.tar.xz",
+          "checksum": "sha256:8494c98a774051a40bfe1187a2d6442f4bc107598998bbe1673d9bb1572cfd6f",
+          "bin": "bin/clang"
+        },
+        "arm64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.7/LLVM-20.1.7-Linux-ARM64.tar.xz",
+          "checksum": "sha256:832f2802a29457dc758f56e26e98558c6cd0e45fcd07186f540cb6e7f4e59385",
+          "bin": "bin/clang"
+        }
+      },
+      "darwin": {
+        "amd64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.7/LLVM-20.1.7-macOS-X64.tar.xz",
+          "checksum": "sha256:ccf82ffe7e136ee49659cb57157856a7963d0950fac3d05aabba0db75bfba26f",
+          "bin": "bin/clang"
+        },
+        "arm64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.7/LLVM-20.1.7-macOS-ARM64.tar.xz",
+          "checksum": "sha256:6aa75de00575ad0663183b00f00f39992ded611b5136e57649ace1e6a53c0d16",
+          "bin": "bin/clang"
+        }
+      }
+    },
+    "20.1.6": {
+      "windows": {
+        "amd64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.6/clang%2Bllvm-20.1.6-x86_64-pc-windows-msvc.tar.xz",
+          "checksum": "sha256:86345035d5ecc482ff391c3270fe37ba9f53e241e7c419f0d7bab9b7c7c57df0",
+          "bin": "bin/clang.exe"
+        }
+      },
+      "linux": {
+        "amd64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.6/LLVM-20.1.6-Linux-X64.tar.xz",
+          "checksum": "sha256:8ecc9878e3d99c8f1db25e5564d12900b4a1fc947f62b8cd01135fd0b15220e4",
+          "bin": "bin/clang"
+        },
+        "arm64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.6/LLVM-20.1.6-Linux-ARM64.tar.xz",
+          "checksum": "sha256:f7c2851771cf26af3e2196e3be060cdafe7ea2e04db24bbd736aea0d2c95e3e9",
+          "bin": "bin/clang"
+        }
+      },
+      "darwin": {}
+    },
+    "20.1.5": {
+      "windows": {
+        "amd64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.5/clang%2Bllvm-20.1.5-x86_64-pc-windows-msvc.tar.xz",
+          "checksum": "sha256:b8e566c0ccf948a5e5946bc0c9d16110b937991816c8f46b9c8b3d1cd9ac7c9a",
+          "bin": "bin/clang.exe"
+        }
+      },
+      "linux": {
+        "amd64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.5/LLVM-20.1.5-Linux-X64.tar.xz",
+          "checksum": "sha256:0a764a8ca521606532ca9ec4e5745c933b16b7d30f4701a47ee851d448fcdb74",
+          "bin": "bin/clang"
+        },
+        "arm64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.5/LLVM-20.1.5-Linux-ARM64.tar.xz",
+          "checksum": "sha256:a6b8679be46bdaa383e0c7f13a473ca8f7a4f87233f2cc0e0a7ab19e1b6265e7",
+          "bin": "bin/clang"
+        }
+      },
+      "darwin": {}
+    },
+    "20.1.4": {
+      "windows": {
+        "amd64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.4/clang%2Bllvm-20.1.4-x86_64-pc-windows-msvc.tar.xz",
+          "checksum": "sha256:2b12ac1a0689e29a38a7c98c409cbfa83f390aea30c60b7a06e4ed73f82d2457",
+          "bin": "bin/clang.exe"
+        }
+      },
+      "linux": {
+        "amd64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.4/LLVM-20.1.4-Linux-X64.tar.xz",
+          "checksum": "sha256:113b54c397adb2039fa45e38dc8107b9ec5a0baead3a3bac8ccfbb65b2340caa",
+          "bin": "bin/clang"
+        },
+        "arm64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.4/LLVM-20.1.4-Linux-ARM64.tar.xz",
+          "checksum": "sha256:4de80a332eecb06bf55097fd3280e1c69ed80f222e5bdd556221a6ceee02721a",
+          "bin": "bin/clang"
+        }
+      },
+      "darwin": {
+        "arm64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.4/LLVM-20.1.4-macOS-ARM64.tar.xz",
+          "checksum": "sha256:debb43b7b364c5cf864260d84ba1b201d49b6460fe84b76eaa65688dfadf19d2",
+          "bin": "bin/clang"
+        }
+      }
+    },
+    "20.1.3": {
+      "windows": {
+        "amd64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.3/clang%2Bllvm-20.1.3-x86_64-pc-windows-msvc.tar.xz",
+          "checksum": "sha256:3831e10ca8409e2288d70491c2fd925f5d5f9b644abf4553552887ff9ce32798",
+          "bin": "bin/clang.exe"
+        }
+      },
+      "linux": {
+        "amd64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.3/LLVM-20.1.3-Linux-X64.tar.xz",
+          "checksum": "sha256:c75103f520626cd2137a7e907998f12fff64136514ade1bb0a259995ae2de80e",
+          "bin": "bin/clang"
+        },
+        "arm64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.3/LLVM-20.1.3-Linux-ARM64.tar.xz",
+          "checksum": "sha256:a9030b70bd8e1d8fe1e48d7b32c8328f2861f00e8474b22105037235a5774bcf",
+          "bin": "bin/clang"
+        }
+      },
+      "darwin": {
+        "amd64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.3/LLVM-20.1.3-macOS-X64.tar.xz",
+          "checksum": "sha256:c3043862e4715ed3dc9f2c83e2a600e75ffecc005b977a391af50664a63fed2b",
+          "bin": "bin/clang"
+        },
+        "arm64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.3/LLVM-20.1.3-macOS-ARM64.tar.xz",
+          "checksum": "sha256:70cd48fcd6b838690149bd00a85270d054c1c410d430f7c51f6d6e9019790d62",
+          "bin": "bin/clang"
+        }
+      }
+    }
+  }
+}

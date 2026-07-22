@@ -1,3 +1,4 @@
+import hashlib
 import json
 import os
 import re
@@ -49,16 +50,14 @@ def parse_version(tag_name):
     return None
 
 
-def get_checksum(asset_url, headers):
-    """Now, we try to fetch SHA256 checksum from .sha256 file"""
-    sha_url = asset_url + ".sha256"
-    try:
-        resp = requests.get(sha_url, headers=headers)
-        if resp.status_code == 200:
-            return resp.text.split()[0]
-    except Exception:
-        pass
-    return ""
+def compute_sha256(url):
+    print(f"Computing checksum for {url.split('/')[-1]}. . .", file=sys.stderr)
+    _hash = hashlib.sha256()
+    with requests.get(url, stream=True) as resp:
+        resp.raise_for_status()
+        for chunk in resp.iter_content(chunk_size=8192):
+            _hash.update(chunk)
+    return _hash.hexdigest()
 
 
 def build_manifest(existing_manifest=None):
@@ -105,18 +104,21 @@ def build_manifest(existing_manifest=None):
             assets = release.get("assets", [])
 
             for platform in PLATFORMS:
+                goos = platform["goos"]
+                goarch = platform["goarch"]
+
+                if goarch in manifest["versions"][version][goos]:
+                    continue
+
                 for asset in assets:
                     name = asset["name"]
-
                     if (
                         platform["pattern"] in name
                         and name.endswith(platform["ext"])
                         and "installer" not in name.lower()
                         and not name.endswith(".exe")
                     ):
-                        checksum = get_checksum(asset["browser_download_url"], headers)
-                        goos = platform["goos"]
-                        goarch = platform["goarch"]
+                        checksum = compute_sha256(asset["browser_download_url"])
 
                         manifest["versions"][version][goos][goarch] = {
                             "url": asset["browser_download_url"],

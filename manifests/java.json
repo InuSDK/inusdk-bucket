@@ -3015,7 +3015,18 @@
           "bin": "bin/java"
         }
       },
-      "darwin": {}
+      "darwin": {
+        "amd64": {
+          "url": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.32%2B9/OpenJDK11U-jdk_x64_mac_hotspot_11.0.32_9.tar.gz",
+          "checksum": "sha256:e4c30df263e3ebb4b2b5df52c736fbd0b16df5ae6b9a6789460a784620ba1319",
+          "bin": "Contents/Home/bin/java"
+        },
+        "arm64": {
+          "url": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.32%2B9/OpenJDK11U-jdk_aarch64_mac_hotspot_11.0.32_9.tar.gz",
+          "checksum": "sha256:3e3687488e472035b7a27732f0f6127d59903ba9fd0cb6c815f1a182f4160109",
+          "bin": "Contents/Home/bin/java"
+        }
+      }
     },
     "17.0.20": {
       "windows": {
@@ -3041,6 +3052,11 @@
         "amd64": {
           "url": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.20%2B8/OpenJDK17U-jdk_x64_mac_hotspot_17.0.20_8.tar.gz",
           "checksum": "sha256:3710c3131c5d7c090582b357f1310133a90bf701183d065223f1a0b90b9ed5ae",
+          "bin": "Contents/Home/bin/java"
+        },
+        "arm64": {
+          "url": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.20%2B8/OpenJDK17U-jdk_aarch64_mac_hotspot_17.0.20_8.tar.gz",
+          "checksum": "sha256:524850138c742324fb21fca4ff6ef68ea25f25bf59366a864e45b4a0c45ed0df",
           "bin": "Contents/Home/bin/java"
         }
       }
@@ -3069,6 +3085,11 @@
         "amd64": {
           "url": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.12%2B8/OpenJDK21U-jdk_x64_mac_hotspot_21.0.12_8.tar.gz",
           "checksum": "sha256:6b85c260eea574a995eacd0b3ee23c8042aa93b23a08e6478edafca0a0333d7f",
+          "bin": "Contents/Home/bin/java"
+        },
+        "arm64": {
+          "url": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.12%2B8/OpenJDK21U-jdk_aarch64_mac_hotspot_21.0.12_8.tar.gz",
+          "checksum": "sha256:021d629349ebc12a409faa517b837ec80ceee8f58a5ac85c788ecad07ca6881c",
           "bin": "Contents/Home/bin/java"
         }
       }

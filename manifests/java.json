@@ -3067,6 +3067,11 @@
           "url": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.12%2B8/OpenJDK21U-jdk_x64_windows_hotspot_21.0.12_8.zip",
           "checksum": "sha256:9ba963ee2371874a74185d18bc7bb2ab9407df7683300855ed7606e0662321d0",
           "bin": "bin/java.exe"
+        },
+        "arm64": {
+          "url": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.12%2B8/OpenJDK21U-jdk_aarch64_windows_hotspot_21.0.12_8.zip",
+          "checksum": "sha256:e7ddf1cf45885cae2cfb8a018db60b0041ef69e96843b93a92b447d9a4cba676",
+          "bin": "bin/java.exe"
         }
       },
       "linux": {
@@ -3150,6 +3155,34 @@
         "arm64": {
           "url": "https://github.com/adoptium/temurin26-binaries/releases/download/jdk-26.0.2%2B10/OpenJDK26U-jdk_aarch64_mac_hotspot_26.0.2_10.tar.gz",
           "checksum": "sha256:4c9255ed5a9fa84ad6e25675bac6ba6a4906fc7878169d7369a1424157b50256",
+          "bin": "Contents/Home/bin/java"
+        }
+      }
+    },
+    "8.0.502": {
+      "windows": {
+        "amd64": {
+          "url": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u502-b07/OpenJDK8U-jdk_x64_windows_hotspot_8u502b07.zip",
+          "checksum": "sha256:3f193fe5e36409c564eb3b7668cb33cab96aa5879d9b284f25f8653e993b1c49",
+          "bin": "bin/java.exe"
+        }
+      },
+      "linux": {
+        "amd64": {
+          "url": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u502-b07/OpenJDK8U-jdk_x64_linux_hotspot_8u502b07.tar.gz",
+          "checksum": "sha256:b8f5440f64f50193c01f67dacba55c9660caffe13b908baf6bd1955f4dd4c3ea",
+          "bin": "bin/java"
+        },
+        "arm64": {
+          "url": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u502-b07/OpenJDK8U-jdk_aarch64_linux_hotspot_8u502b07.tar.gz",
+          "checksum": "sha256:34912db17786f7144dab274f040a42028e25da6e7a6a09780d7013339a56bdb2",
+          "bin": "bin/java"
+        }
+      },
+      "darwin": {
+        "amd64": {
+          "url": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u502-b07/OpenJDK8U-jdk_x64_mac_hotspot_8u502b07.tar.gz",
+          "checksum": "sha256:66565d468f4a48e9defa7420bbe522bf811a00609f618da1a85fc4ff149683b1",
           "bin": "Contents/Home/bin/java"
         }
       }

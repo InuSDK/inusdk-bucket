@@ -630,6 +630,28 @@
           "bin": "bin/clang"
         }
       }
+    },
+    "23.1.0": {
+      "windows": {
+        "amd64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-23.1.0/clang%2Bllvm-23.1.0-x86_64-pc-windows-msvc.tar.xz",
+          "checksum": "sha256:5799ebeca6870e9e61d5b4c8bc869ca8490e8db55f22d1388c4545404864d9e3",
+          "bin": "bin/clang.exe"
+        }
+      },
+      "linux": {
+        "amd64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-23.1.0/LLVM-23.1.0-Linux-X64.tar.xz",
+          "checksum": "sha256:18da30f77f475688a18f7704d23f9f155ae007ed9922dbed6850a9419d9fec8c",
+          "bin": "bin/clang"
+        },
+        "arm64": {
+          "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-23.1.0/LLVM-23.1.0-Linux-ARM64.tar.xz",
+          "checksum": "sha256:cfb31bfc713ef453248bf5bd026312f838ad6c52c25623e987cb6a340f3050d4",
+          "bin": "bin/clang"
+        }
+      },
+      "darwin": {}
     }
   }
 }

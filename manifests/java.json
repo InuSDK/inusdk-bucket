@@ -3220,6 +3220,28 @@
           "bin": "Contents/Home/bin/java"
         }
       }
+    },
+    "27.0.0": {
+      "windows": {},
+      "linux": {
+        "amd64": {
+          "url": "https://github.com/adoptium/temurin27-binaries/releases/download/jdk-27%2B35/OpenJDK27U-jdk_x64_linux_hotspot_27_35.tar.gz",
+          "checksum": "sha256:1cf69a4848ffb728b3b260dfd45206a51566ab571a02a30092271d4c580bccbc",
+          "bin": "bin/java"
+        },
+        "arm64": {
+          "url": "https://github.com/adoptium/temurin27-binaries/releases/download/jdk-27%2B35/OpenJDK27U-jdk_aarch64_linux_hotspot_27_35.tar.gz",
+          "checksum": "sha256:e4ec5c7276290c7bde0baecba9a29be4962f5388684296406a9799d465936087",
+          "bin": "bin/java"
+        }
+      },
+      "darwin": {
+        "arm64": {
+          "url": "https://github.com/adoptium/temurin27-binaries/releases/download/jdk-27%2B35/OpenJDK27U-jdk_aarch64_mac_hotspot_27_35.tar.gz",
+          "checksum": "sha256:a59626c926f0146a286cb535fc9a46499d6c46b3d79ae72168bbf18438fe49dd",
+          "bin": "Contents/Home/bin/java"
+        }
+      }
     }
   }
 }

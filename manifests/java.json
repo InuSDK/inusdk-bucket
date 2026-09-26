@@ -3222,7 +3222,13 @@
       }
     },
     "27.0.0": {
-      "windows": {},
+      "windows": {
+        "amd64": {
+          "url": "https://github.com/adoptium/temurin27-binaries/releases/download/jdk-27%2B35/OpenJDK27U-jdk_x64_windows_hotspot_27_35.zip",
+          "checksum": "sha256:2031c9c5c624737ed29a0624caaf5bcc25e74235834c28b4bfa88f7ba7a40e4a",
+          "bin": "bin/java.exe"
+        }
+      },
       "linux": {
         "amd64": {
           "url": "https://github.com/adoptium/temurin27-binaries/releases/download/jdk-27%2B35/OpenJDK27U-jdk_x64_linux_hotspot_27_35.tar.gz",

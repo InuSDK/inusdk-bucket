@@ -1673,8 +1673,8 @@
       },
       "linux": {
         "amd64": {
-          "url": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.4%2B8/OpenJDK17U-jdk_x64_linux_hotspot_17.0.4_8.tar.gz",
-          "checksum": "sha256:c0851d610b03cb51e9b360fef3e9ec2026c62837a143e7786649ba94f38cc0d1",
+          "url": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.4.1%2B1/OpenJDK17U-jdk_x64_linux_hotspot_17.0.4.1_1.tar.gz",
+          "checksum": "sha256:5fbf8b62c44f10be2efab97c5f5dbf15b74fae31e451ec10abbc74e54a04ff44",
           "bin": "bin/java"
         },
         "arm64": {
@@ -1690,8 +1690,8 @@
           "bin": "Contents/Home/bin/java"
         },
         "arm64": {
-          "url": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.4%2B8/OpenJDK17U-jdk_aarch64_mac_hotspot_17.0.4_8.tar.gz",
-          "checksum": "sha256:19fffac89c4b8c0b4da32cae2cbd864ad9e71875aa3ab69f3a5900b6b2e16e7b",
+          "url": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.4.1%2B1/OpenJDK17U-jdk_aarch64_mac_hotspot_17.0.4.1_1.tar.gz",
+          "checksum": "sha256:3a976943a9e6a635e68e2b06bd093fc096aad9f5894acda673d3bea0cb3a6f38",
           "bin": "Contents/Home/bin/java"
         }
       }
@@ -3245,6 +3245,57 @@
         "arm64": {
           "url": "https://github.com/adoptium/temurin27-binaries/releases/download/jdk-27%2B35/OpenJDK27U-jdk_aarch64_mac_hotspot_27_35.tar.gz",
           "checksum": "sha256:a59626c926f0146a286cb535fc9a46499d6c46b3d79ae72168bbf18438fe49dd",
+          "bin": "Contents/Home/bin/java"
+        }
+      }
+    },
+    "17.0.21": {
+      "windows": {},
+      "linux": {
+        "amd64": {
+          "url": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.21%2B9/OpenJDK17U-jdk_x64_linux_hotspot_17.0.21_9.tar.gz",
+          "checksum": "sha256:8b9b611d917e3dfd8419d3566b5949226f69b052fed7e109c1368add1dfe8711",
+          "bin": "bin/java"
+        }
+      },
+      "darwin": {
+        "arm64": {
+          "url": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.21%2B9/OpenJDK17U-jdk_aarch64_mac_hotspot_17.0.21_9.tar.gz",
+          "checksum": "sha256:78b08c7f5a0598242d5719c022e19479cb4a3aa45c37c19726a757a469ed1c15",
+          "bin": "Contents/Home/bin/java"
+        }
+      }
+    },
+    "21.0.13": {
+      "windows": {},
+      "linux": {
+        "amd64": {
+          "url": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.13%2B9/OpenJDK21U-jdk_x64_linux_hotspot_21.0.13_9.tar.gz",
+          "checksum": "sha256:d7f5d5cf865a2902b70ff549b97586a7d3f234e016f041ab447ea740c7d66d1c",
+          "bin": "bin/java"
+        }
+      },
+      "darwin": {
+        "arm64": {
+          "url": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.13%2B9/OpenJDK21U-jdk_aarch64_mac_hotspot_21.0.13_9.tar.gz",
+          "checksum": "sha256:bf036b35b071bfb2f54f2c0af8ee8d88afa95ee6eb3dce02c0f94cfc2524d04a",
+          "bin": "Contents/Home/bin/java"
+        }
+      }
+    },
+    "25.0.5": {
+      "windows": {},
+      "linux": {
+        "amd64": {
+          "url": "https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25.0.5%2B8/OpenJDK25U-jdk_x64_linux_hotspot_25.0.5_8.tar.gz",
+          "checksum": "sha256:68982529869257d0ee6b824ec5aa270ff8b118bb438670da0b97ebdab178d7fb",
+          "bin": "bin/java"
+        }
+      },
+      "darwin": {
+        "arm64": {
+          "url": "https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25.0.5%2B8/OpenJDK25U-jdk_aarch64_mac_hotspot_25.0.5_8.tar.gz",
+          "checksum": "sha256:36dc14d797aaff6d89aab302cd053fdba6207dfdcf772052fa7b023a94b0e857",
           "bin": "Contents/Home/bin/java"
         }
       }

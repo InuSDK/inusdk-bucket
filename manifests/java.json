@@ -1061,8 +1061,8 @@
           "bin": "bin/java"
         },
         "arm64": {
-          "url": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16%2B8/OpenJDK11U-jdk_aarch64_linux_hotspot_11.0.16_8.tar.gz",
-          "checksum": "sha256:bb345cabf3e305ff3ce390918d5f69e5cfbced3d9844e0b0531c2690f9ed06ef",
+          "url": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jdk_aarch64_linux_hotspot_11.0.16.1_1.tar.gz",
+          "checksum": "sha256:2b89cabf0ce1c2cedadd92b798d6e9056bc27c71a06f5ba24ede5dc9c316e3e8",
           "bin": "bin/java"
         }
       },
@@ -1666,8 +1666,8 @@
     "17.0.4": {
       "windows": {
         "amd64": {
-          "url": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.4%2B8/OpenJDK17U-jdk_x64_windows_hotspot_17.0.4_8.zip",
-          "checksum": "sha256:35139d1ba8dd50853f9dbf34a4401a3d588ab54951ef98f447b7addbbab67060",
+          "url": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.4.1%2B1/OpenJDK17U-jdk_x64_windows_hotspot_17.0.4.1_1.zip",
+          "checksum": "sha256:3860d2ed7405674baeb0f9f4c71377421716759fe4301e92bdd4dd43c0442dc3",
           "bin": "bin/java.exe"
         }
       },
@@ -3383,6 +3383,11 @@
           "url": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u512-b09/OpenJDK8U-jdk_x64_linux_hotspot_8u512b09.tar.gz",
           "checksum": "sha256:fb3bfa869012419b562bb4235d0d83ec4f8c1dda62ae432ba20c6c3a7e43f7e4",
           "bin": "bin/java"
+        },
+        "arm64": {
+          "url": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u512-b09/OpenJDK8U-jdk_aarch64_linux_hotspot_8u512b09.tar.gz",
+          "checksum": "sha256:01263df22c4553f63146bbae807e70cd4628dd0d9ec7582f01cb2453f7c69aaa",
+          "bin": "bin/java"
         }
       },
       "darwin": {}
@@ -3394,12 +3399,22 @@
           "url": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.33%2B10/OpenJDK11U-jdk_x64_linux_hotspot_11.0.33_10.tar.gz",
           "checksum": "sha256:c4b8eaf56c93b95b689ffc08d155df1bcdbbffb666f8f71d21d97aedaea6f0ec",
           "bin": "bin/java"
+        },
+        "arm64": {
+          "url": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.33%2B10/OpenJDK11U-jdk_aarch64_linux_hotspot_11.0.33_10.tar.gz",
+          "checksum": "sha256:60b0fb79bb678b6fae3e499c7b0a353e68633ed0ab69d1a6bafe6092ed1e59e4",
+          "bin": "bin/java"
         }
       },
       "darwin": {
         "amd64": {
           "url": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.33%2B10/OpenJDK11U-jdk_x64_mac_hotspot_11.0.33_10.tar.gz",
           "checksum": "sha256:11e3e9de3ce65ff957aee9b4b76876553e9d328cab9aede47996463625c88887",
+          "bin": "Contents/Home/bin/java"
+        },
+        "arm64": {
+          "url": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.33%2B10/OpenJDK11U-jdk_aarch64_mac_hotspot_11.0.33_10.tar.gz",
+          "checksum": "sha256:6ef5b027206691439b2dcb2fc05adc13cc7f5b6e75a08fce8f75ee188adc7751",
           "bin": "Contents/Home/bin/java"
         }
       }
